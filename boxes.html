@@ -4,16 +4,21 @@
         html {
             background-color: purple;
         }
-        .front, .back, .box {
+        .front, .back {
             height: 100px;
             width:100px;
-            margin: 3px;
             background-color: red;
             display: inline-block;
+            text-align: center;
+            line-height: 100px;
         }
 
         .box {
             background: none;
+            height: 100px;
+            width: 100px;
+            display: inline-block;
+            margin: 3px;
         }
 
         .back {
@@ -41,7 +46,6 @@
             div = document.createElement('div');
             div.innerHTML = "<div class='front'>Front</div><div class='back'>Back</div>";
             div.className = "box";
-//            div.id = "card";
             body.appendChild(div);
         }
     </script>
