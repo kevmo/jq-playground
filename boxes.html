@@ -1,0 +1,50 @@
+<html>
+<head>
+    <style>
+        html {
+            background-color: purple;
+        }
+        .front, .back, .box {
+            height: 100px;
+            width:100px;
+            margin: 3px;
+            background-color: red;
+            display: inline-block;
+        }
+
+        .back {
+            background-color: grey;
+        }
+
+
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.0.0.js"
+            integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo="
+            crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+
+
+</head>
+<body>
+    <script>
+        var div;
+        var body = document.getElementsByTagName('body')[0];
+
+        for (var i=0; i < 100; i++){
+            div = document.createElement('div');
+            div.innerHTML = "<div class='front'>Front</div><div class='back'>Back</div>";
+            div.className = "box";
+//            div.id = "card";
+            body.appendChild(div);
+        }
+    </script>
+
+    <script>
+        $('.box').flip();
+    </script>
+
+</body>
+</html>
